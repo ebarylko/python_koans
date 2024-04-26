@@ -45,8 +45,8 @@ class AboutGenerators(Koan):
         attempt1 = list(dynamite)
         attempt2 = list(dynamite)
 
-        self.assertEqual(__, attempt1)
-        self.assertEqual(__, attempt2)
+        self.assertEqual(['Boom!', 'Boom!', 'Boom!'], attempt1)
+        self.assertEqual([], attempt2)
 
     # ------------------------------------------------------------------
 
@@ -146,3 +146,4 @@ class AboutGenerators(Koan):
 test = AboutGenerators()
 test.test_generating_values_on_the_fly()
 test.test_generators_are_different_to_list_comprehensions()
+test.test_generator_expressions_are_a_one_shot_deal()
