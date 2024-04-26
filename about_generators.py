@@ -64,8 +64,8 @@ class AboutGenerators(Koan):
 
     def test_generators_can_be_manually_iterated_and_closed(self):
         result = self.simple_generator_method()
-        self.assertEqual(__, next(result))
-        self.assertEqual(__, next(result))
+        self.assertEqual("peanut", next(result))
+        self.assertEqual("butter", next(result))
         result.close()
 
     # ------------------------------------------------------------------
@@ -76,7 +76,7 @@ class AboutGenerators(Koan):
 
     def test_generator_method_with_parameter(self):
         result = self.square_me(range(2, 5))
-        self.assertEqual(__, list(result))
+        self.assertEqual([4, 9, 16], list(result))
 
     # ------------------------------------------------------------------
 
@@ -89,7 +89,7 @@ class AboutGenerators(Koan):
 
     def test_generator_keeps_track_of_local_variables(self):
         result = self.sum_it(range(2, 5))
-        self.assertEqual(__, list(result))
+        self.assertEqual([2, 5, 9], list(result))
 
     # ------------------------------------------------------------------
 
@@ -107,7 +107,7 @@ class AboutGenerators(Koan):
         #       section of http://www.python.org/dev/peps/pep-0342/
         next(generator)
 
-        self.assertEqual(__, generator.send(1 + 2))
+        self.assertEqual(3, generator.send(1 + 2))
 
     def test_before_sending_a_value_to_a_generator_next_must_be_called(self):
         generator = self.coroutine()
@@ -148,3 +148,7 @@ test.test_generating_values_on_the_fly()
 test.test_generators_are_different_to_list_comprehensions()
 test.test_generator_expressions_are_a_one_shot_deal()
 test.test_generator_method_will_yield_values_during_iteration()
+test.test_generators_can_be_manually_iterated_and_closed()
+test.test_generator_method_with_parameter()
+test.test_generator_keeps_track_of_local_variables()
+test.test_generators_can_act_as_coroutines()
