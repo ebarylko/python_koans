@@ -60,7 +60,7 @@ class AboutGenerators(Koan):
         result = list()
         for item in self.simple_generator_method():
             result.append(item)
-        self.assertEqual(__, result)
+        self.assertEqual(['peanut', 'butter', 'and', 'jelly'], result)
 
     def test_generators_can_be_manually_iterated_and_closed(self):
         result = self.simple_generator_method()
@@ -147,3 +147,4 @@ test = AboutGenerators()
 test.test_generating_values_on_the_fly()
 test.test_generators_are_different_to_list_comprehensions()
 test.test_generator_expressions_are_a_one_shot_deal()
+test.test_generator_method_will_yield_values_during_iteration()
