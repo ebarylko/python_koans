@@ -64,8 +64,8 @@ class AboutDecoratingWithClasses(Koan):
         # To clarify: the decorator above the function has no arguments, even
         # if the decorated function does
 
-        self.assertEqual(__, self.foo())
-        self.assertEqual(__, self.parrot('pieces of eight'))
+        self.assertEqual("foo, foo", self.foo())
+        self.assertEqual('PIECES OF EIGHT, PIECES OF EIGHT', self.parrot('pieces of eight'))
 
     # ------------------------------------------------------------------
 
@@ -131,3 +131,4 @@ tests = AboutDecoratingWithClasses()
 tests.test_partial_that_wrappers_no_args()
 tests.test_partial_that_wrappers_first_arg()
 tests.test_partial_that_wrappers_all_args()
+tests.test_decorator_with_no_arguments()
