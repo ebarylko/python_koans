@@ -32,8 +32,8 @@ class AboutDecoratingWithClasses(Koan):
         always99 = functools.partial(self.maximum, 99, 20)
         always20 = functools.partial(self.maximum, 9, 20)
 
-        self.assertEqual(__, always99())
-        self.assertEqual(__, always20())
+        self.assertEqual(99, always99())
+        self.assertEqual(20, always20())
 
     # ------------------------------------------------------------------
 
@@ -130,3 +130,4 @@ class AboutDecoratingWithClasses(Koan):
 tests = AboutDecoratingWithClasses()
 tests.test_partial_that_wrappers_no_args()
 tests.test_partial_that_wrappers_first_arg()
+tests.test_partial_that_wrappers_all_args()
