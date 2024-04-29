@@ -123,8 +123,8 @@ class AboutDecoratingWithClasses(Koan):
         return "D'oh"
 
     def test_we_can_chain_decorators(self):
-        self.assertEqual(__, self.homer())
-        self.assertEqual(__, self.homer.__doc__)
+        self.assertEqual("D'oh, D'oh, D'oh, D'oh", self.homer())
+        self.assertEqual("DOH!", self.homer.__doc__)
 
 
 tests = AboutDecoratingWithClasses()
@@ -135,3 +135,4 @@ tests.test_decorator_with_no_arguments()
 tests.test_what_a_decorator_is_doing_to_a_function()
 tests.test_decorator_with_an_argument()
 tests.test_documentor_which_already_has_a_docstring()
+tests.test_we_can_chain_decorators()
