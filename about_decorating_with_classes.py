@@ -77,7 +77,7 @@ class AboutDecoratingWithClasses(Koan):
         #wrap the function with the decorator
         self.sound_check = self.doubleit(self.sound_check)
 
-        self.assertEqual(__, self.sound_check())
+        self.assertEqual("Testing..., Testing...", self.sound_check())
 
     # ------------------------------------------------------------------
 
@@ -132,3 +132,4 @@ tests.test_partial_that_wrappers_no_args()
 tests.test_partial_that_wrappers_first_arg()
 tests.test_partial_that_wrappers_all_args()
 tests.test_decorator_with_no_arguments()
+tests.test_what_a_decorator_is_doing_to_a_function()
