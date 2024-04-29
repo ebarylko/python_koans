@@ -143,7 +143,6 @@ class AboutGenerators(Koan):
         self.assertEqual("no value", generator.send(None))
 
 
-
 test = AboutGenerators()
 test.test_generating_values_on_the_fly()
 test.test_generators_are_different_to_list_comprehensions()
